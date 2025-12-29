@@ -24,10 +24,12 @@ jobs:
     
     - name: Run unit tests
       run: |
+        export PYTHONPATH=.
         pytest tests/test_features.py -v
     
     - name: Run component tests
       run: |
+        export PYTHONPATH=.
         pytest tests/test_component.py -v
     
     - name: Build Docker image
